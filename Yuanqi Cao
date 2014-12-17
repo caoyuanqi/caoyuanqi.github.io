@@ -7,7 +7,7 @@
         <meta name="copyright" content="Yuanqi Cao" />
 
         <meta name="description" content="My name is Yuanqi Cao ― a IT guy live in Sydney who like programming to change the world. I like Emacs and scripts language. " />
-        <title> <span style="colour:red;">Cao</span> <span style="color:darkgreen;">->Log</span>  - Articles by Alexis Metaireau</title>
+        <title> <span style="colour:red;">Cao</span> <span style="color:darkgreen;">->Log</span>  - Articles by Yuanqi Cao</title>
         <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="http://caoyuanqi.github.io/theme/css/style.css" media="screen">
@@ -89,8 +89,8 @@
             </header>
             <ul class="list-all-articles">
                 <li>
-                <a href="http://caoyuanqi.github.io/my-super-post">Hello world  <small> This is a subtitle </small>  </a> 
-                <time pubdate="pubdate" datetime="2010-10-03T10:20:00+11:00">Oct 03, 2010</time>
+                <a href="http://caoyuanqi.github.io/hello world">Hello world  <small> from pelican </small>  </a> 
+                <time pubdate="pubdate" datetime="2014-12-17T00:00:00+11:00">Dec 17, 2014</time>
                 </li>
             </ul>
         </div>
