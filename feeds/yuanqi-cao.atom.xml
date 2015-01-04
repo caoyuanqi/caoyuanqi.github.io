@@ -1,3 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Cao -&gt;Log</title><link href="http://caoyuanqi.github.io/" rel="alternate"></link><link href="http://caoyuanqi.github.io/feeds/yuanqi-cao.atom.xml" rel="self"></link><id>http://caoyuanqi.github.io/</id><updated>2014-12-17T00:00:00+11:00</updated><entry><title>Hello world</title><link href="http://caoyuanqi.github.io/hello%20world" rel="alternate"></link><updated>2014-12-17T00:00:00+11:00</updated><author><name>Yuanqi Cao</name></author><id>tag:caoyuanqi.github.io,2014-12-17:hello world</id><summary type="html">&lt;p&gt;Under constructing ...&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Cao -&gt;Log</title><link href="http://caoyuanqi.github.io/" rel="alternate"></link><link href="http://caoyuanqi.github.io/feeds/yuanqi-cao.atom.xml" rel="self"></link><id>http://caoyuanqi.github.io/</id><updated>2015-01-01T00:00:00+11:00</updated><entry><title>Hello world</title><link href="http://caoyuanqi.github.io/hello%20world" rel="alternate"></link><updated>2015-01-01T00:00:00+11:00</updated><author><name>Yuanqi Cao</name></author><id>tag:caoyuanqi.github.io,2015-01-01:hello world</id><summary type="html">&lt;p&gt;Hi, 2015 and the&amp;nbsp;world&lt;/p&gt;
+&lt;p&gt;This is my personal website, and I treat it like a personal hacking note and some organization of some technical thinking. So I will keep the words simple and&amp;nbsp;focus.&lt;/p&gt;
+&lt;p&gt;I think I should get some wish in the new&amp;nbsp;year:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Happy&amp;nbsp;life&lt;/li&gt;
+&lt;li&gt;More powerful hacking&amp;nbsp;skills&lt;/li&gt;
+&lt;li&gt;More time with my&amp;nbsp;family&lt;/li&gt;
+&lt;li&gt;Job&lt;/li&gt;
+&lt;li&gt;Health&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;So, ready let&amp;#8217;s&amp;nbsp;go&lt;/p&gt;
 </summary><category term="pelican"></category></entry></feed>

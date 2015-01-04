@@ -1,3 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cao -&gt;Log</title><link>http://caoyuanqi.github.io/</link><description></description><atom:link href="http://caoyuanqi.github.io/feeds/yuanqi-cao.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 17 Dec 2014 00:00:00 +1100</lastBuildDate><item><title>Hello world</title><link>http://caoyuanqi.github.io/hello%20world</link><description>&lt;p&gt;Under constructing ...&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Yuanqi Cao</dc:creator><pubDate>Wed, 17 Dec 2014 00:00:00 +1100</pubDate><guid>tag:caoyuanqi.github.io,2014-12-17:hello world</guid><category>pelican</category></item></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cao -&gt;Log</title><link>http://caoyuanqi.github.io/</link><description></description><atom:link href="http://caoyuanqi.github.io/feeds/yuanqi-cao.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 01 Jan 2015 00:00:00 +1100</lastBuildDate><item><title>Hello world</title><link>http://caoyuanqi.github.io/hello%20world</link><description>&lt;p&gt;Hi, 2015 and the&amp;nbsp;world&lt;/p&gt;
+&lt;p&gt;This is my personal website, and I treat it like a personal hacking note and some organization of some technical thinking. So I will keep the words simple and&amp;nbsp;focus.&lt;/p&gt;
+&lt;p&gt;I think I should get some wish in the new&amp;nbsp;year:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Happy&amp;nbsp;life&lt;/li&gt;
+&lt;li&gt;More powerful hacking&amp;nbsp;skills&lt;/li&gt;
+&lt;li&gt;More time with my&amp;nbsp;family&lt;/li&gt;
+&lt;li&gt;Job&lt;/li&gt;
+&lt;li&gt;Health&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;So, ready let&amp;#8217;s&amp;nbsp;go&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Yuanqi Cao</dc:creator><pubDate>Thu, 01 Jan 2015 00:00:00 +1100</pubDate><guid>tag:caoyuanqi.github.io,2015-01-01:hello world</guid><category>pelican</category></item></channel></rss>
