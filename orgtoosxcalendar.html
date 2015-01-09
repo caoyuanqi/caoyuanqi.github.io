@@ -61,8 +61,9 @@
         <div class="span8 offset2 article-content">
 
             <p>In the daily life, I prefer to use emacs org mode to manage my time and I also use iphone and macbook. The org mode is a perfect way to manage your time but iphone and calendar is a good way to track your time. So is there a good way to let them work better for&nbsp;me?</p>
-<p>so I tried org <a class="reference external" href="https://itunes.apple.com/us/app/mobileorg/id634225528?ls=1&amp;mt=8">mobile</a> before, but it is really hard to use in iphone , and it will create some mark line in the pushed event. There is no good solution on the Internet. So I made a perl script to parse the org file and get out every event and time then import into osx Calendar by calling relative apple-script&nbsp;command.</p>
-<p>It will automaticly import an event into osx calendar when you assigned a time to it. If your i phone is connected into cloud, it will of course alert your automaticly.  And you can check your schedule on both org agenda and your iphone and clendar on the <span class="caps">OSX</span>.</p>
+<p>I tried org <a class="reference external" href="https://itunes.apple.com/us/app/mobileorg/id634225528?ls=1&amp;mt=8">mobile</a> before, but it is really hard to use in iphone , and it will create some mark line in the pushed event which make the org file more hard to read. I also tryed <a class="reference external" href="http://orgmode.org/worg/org-contrib/org-mac-iCal.html">org-mac-ical.el</a> but it is out of date and it can not work in <span class="caps">OSX</span> 10.10&nbsp;now.</p>
+<p>There is no good solution on the Internet. So one year ago,  I made a perl script to parse the org file and import events into Calendar in <span class="caps">OSX</span>. Because it calls relative apple-script command to import events, it will work fine for further version of <span class="caps">OSX</span> without any&nbsp;changes.</p>
+<p>It will automaticly import an event into osx calendar when you assigned a time to it. If your iphone is connected into cloud, it will of course alert your automaticly.  And you can check your schedule on both org agenda and your iphone and clendar on the <span class="caps">OSX</span>.</p>
 <p>The logic is&nbsp;simple:</p>
 <pre class="literal-block">
 1. When emacs store the org file in org mode or org agenda, call the script
