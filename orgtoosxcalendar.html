@@ -9,7 +9,7 @@
         <meta name="description" content="perl script to import org agenda into osx calendar
 " />
 <meta name="keywords" content="perl, emacs, org mode, Programming, perl org agenda osx calenar" />
-        <title>Import emacs org mode agenda into osx&nbsp;calendar  · Cao ->Log
+        <title>Import emacs org mode agenda into osx&nbsp;calendar(perl)  · Cao ->Log
 </title>
         <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
@@ -53,7 +53,7 @@
 <article>
 <div class="row-fluid">
     <header class="page_header span10 offset2">
-    <h1><a href="http://caoyuanqi.github.io/orgtoosxcalendar"> Import emacs org mode agenda into osx&nbsp;calendar  </a></h1>
+    <h1><a href="http://caoyuanqi.github.io/orgtoosxcalendar"> Import emacs org mode agenda into osx&nbsp;calendar(perl)  </a></h1>
     </header>
 </div>
 
@@ -70,7 +70,7 @@
 3. When it finish scan it will store the added event time into time.txt
 4. When any time is added, the event started with the same time will not be added
 </pre>
-<p>To use the script, you should added this <a class="reference external" href="https://github.com/caoyuanqi/scripts/blob/master/_org_file_handler">script</a> into your <span class="caps">PATH</span>.</p>
+<p>To use the script, you should added this <a class="reference external" href="https://github.com/caoyuanqi/scripts/blob/master/_org_file_handler">script</a> into your <span class="caps">PATH</span> and give it excutive&nbsp;right.</p>
 <p>Added this line into your emacs setting files, there will add a hook and call the script every time you store any org&nbsp;file</p>
 <div class="highlight"><pre><span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;after-save-hook</span>
        <span class="o">&#39;</span><span class="p">(</span><span class="k">lambda</span> <span class="p">()</span>
