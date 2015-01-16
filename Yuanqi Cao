@@ -95,12 +95,6 @@
             </ul>
             <ul class="list-all-articles">
                 <li>
-                <a href="http://caoyuanqi.github.io/myemacsroad">My Emacs Road  </a> 
-                <time pubdate="pubdate" datetime="2015-01-13T00:00:00+11:00">Jan 13, 2015</time>
-                </li>
-            </ul>
-            <ul class="list-all-articles">
-                <li>
                 <a href="http://caoyuanqi.github.io/orgtoosxcalendar">Import emacs org mode agenda into osx calendar(perl)  </a> 
                 <time pubdate="pubdate" datetime="2015-01-09T00:00:00+11:00">Jan 09, 2015</time>
                 </li>
