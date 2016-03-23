@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Yuanqi Cao Blog</title><link href="http://caoyuanqi.github.io/" rel="alternate"></link><link href="http://caoyuanqi.github.io/feeds/yuanqi-cao.atom.xml" rel="self"></link><id>http://caoyuanqi.github.io/</id><updated>2015-01-16T00:00:00+11:00</updated><entry><title>Emacs + Eclipse</title><link href="http://caoyuanqi.github.io/emacseclipse" rel="alternate"></link><updated>2015-01-16T00:00:00+11:00</updated><author><name>Yuanqi Cao</name></author><id>tag:caoyuanqi.github.io,2015-01-16:emacseclipse</id><summary type="html">
-&lt;!-- --&gt;
-&lt;div class="section" id="heading-1"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id1"&gt;Heading 1&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="section" id="emacs"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id1"&gt;Emacs ++&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="section" id="problem-emacs-keyboard-is-not-for-the-eclipse"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id2"&gt;Problem : emacs keyboard is not for the eclipse&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Then these two days I have to learn the technique of JavaServer Faces, so I decide to install eclipse and netbean, and set the java programming environment. The setting is simmilar. I tried netbeans a little bit and it officially support emacs keybind, but it is far more than perfect. for example the key &lt;em&gt;c-/&lt;/em&gt; is not auto compelet but find the formal exist word. In Eclipse, with the help with Emacs+, it can complete the code automatively without other tools help.&lt;/p&gt;
 &lt;p&gt;To my surprise, the emacs+ can simulate the setting of mutile frame in emacs such as &lt;em&gt;c-x o&lt;/em&gt; to switch between different frames. it can simulate the &lt;em&gt;c-x c-f&lt;/em&gt; to open a file to edit. which I didn't find before. I think that is a good thing to begin. I have to say, eclipse is more easy to be modified than netbean.&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </summary><category term="emacs"></category></entry><entry><title>My Emacs Road</title><link href="http://caoyuanqi.github.io/myemacsroad" rel="alternate"></link><updated>2015-01-13T00:00:00+11:00</updated><author><name>Yuanqi Cao</name></author><id>tag:caoyuanqi.github.io,2015-01-13:myemacsroad</id><summary type="html">&lt;p&gt;to be continue&lt;/p&gt;
 </summary><category term="Emacs"></category></entry><entry><title>Import emacs org mode agenda into osx calendar(perl)</title><link href="http://caoyuanqi.github.io/orgtoosxcalendar" rel="alternate"></link><updated>2015-01-09T00:00:00+11:00</updated><author><name>Yuanqi Cao</name></author><id>tag:caoyuanqi.github.io,2015-01-09:orgtoosxcalendar</id><summary type="html">&lt;p&gt;In the daily life, I prefer to use emacs org mode to manage my time and I also use iphone and macbook. The org mode is a perfect way to manage your time but iphone and calendar is a good way to track your time. So is there a good way to let them work better for me?&lt;/p&gt;
