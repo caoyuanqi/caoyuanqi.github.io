@@ -9,21 +9,21 @@
     <meta name="description" content="My name is Yuanqi Cao ― a IT guy live in Sydney who like programming to change the world. I like Emacs and scripts language. " />
     <title> <span style="colour:red;">Yuanqi Cao</span> <span style="color:darkgreen;">Blog</span>  - Articles by Yuanqi Cao</title>
     <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/css/solarizedlight.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/css/vendor.min.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/css/main.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="http://caoyuanqi.github.io/theme/css/solarizedlight.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="http://caoyuanqi.github.io/theme/css/vendor.min.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="http://caoyuanqi.github.io/theme/css/main.css" media="screen">
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     
 
-    <link rel="shortcut icon" href="http://localhost:8000/theme/images/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="http://localhost:8000/theme/images/apple-touch-icon.png" />
-    <link rel="apple-touch-icon" sizes="57x57" href="http://localhost:8000/theme/images/apple-touch-icon-57x57.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="http://localhost:8000/theme/images/apple-touch-icon-72x72.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="http://localhost:8000/theme/images/apple-touch-icon-114x114.png" />
-    <link rel="apple-touch-icon" sizes="144x144" href="http://localhost:8000/theme/images/apple-touch-icon-144x144.png" />
-    <link rel="icon" href="http://localhost:8000/theme/images/apple-touch-icon-144x144.png" />
+    <link rel="shortcut icon" href="http://caoyuanqi.github.io/theme/images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="http://caoyuanqi.github.io/theme/images/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="http://caoyuanqi.github.io/theme/images/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="http://caoyuanqi.github.io/theme/images/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="http://caoyuanqi.github.io/theme/images/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="http://caoyuanqi.github.io/theme/images/apple-touch-icon-144x144.png" />
+    <link rel="icon" href="http://caoyuanqi.github.io/theme/images/apple-touch-icon-144x144.png" />
     
   </head>
   <!-- end of head -->
@@ -31,17 +31,17 @@
     <nav>
       <div class="nav-wrapper">
         <a href="#!" class="brand-logo">
-          <img src="http://localhost:8000/theme/images/logo.png" class="" alt="Logo" />
+          <img src="http://caoyuanqi.github.io/theme/images/logo.png" class="" alt="Logo" />
         </a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-          <li ><a href="http://localhost:8000/index.html">Home</a></li>
-          <li ><a href="http://localhost:8000/resume.html">Resume</a></li>
-          <li ><a href="http://localhost:8000/categories.html">Categories</a></li>
-          <li ><a href="http://localhost:8000/tags.html">Tags</a></li>
-          <li ><a href="http://localhost:8000/archives.html">Archives</a></li>
+          <li ><a href="http://caoyuanqi.github.io/index.html">Home</a></li>
+          <li ><a href="http://caoyuanqi.github.io/resume.html">Resume</a></li>
+          <li ><a href="http://caoyuanqi.github.io/categories.html">Categories</a></li>
+          <li ><a href="http://caoyuanqi.github.io/tags.html">Tags</a></li>
+          <li ><a href="http://caoyuanqi.github.io/archives.html">Archives</a></li>
           <li>
-            <form  action="http://localhost:8000/search.html" onsubmit="return validateForm(this.elements['q'].value);">
+            <form  action="http://caoyuanqi.github.io/search.html" onsubmit="return validateForm(this.elements['q'].value);">
               <div class="input-field">
                 <input id="tipue_search_input" type="search" name="q" required>
                 <label for="tipue_search_input"><i class="material-icons">search</i></label>
@@ -50,13 +50,13 @@
           </li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
-          <li ><a href="http://localhost:8000/index.html">Home</a></li>
+          <li ><a href="http://caoyuanqi.github.io/index.html">Home</a></li>
           <li  ><a href="resume.html">Resume</a></li>
-          <li ><a href="http://localhost:8000/categories.html">Categories</a></li>
-          <li ><a href="http://localhost:8000/tags.html">Tags</a></li>
-          <li ><a href="http://localhost:8000/archives.html">Archives</a></li>
+          <li ><a href="http://caoyuanqi.github.io/categories.html">Categories</a></li>
+          <li ><a href="http://caoyuanqi.github.io/tags.html">Tags</a></li>
+          <li ><a href="http://caoyuanqi.github.io/archives.html">Archives</a></li>
           <li>
-            <form  action="http://localhost:8000/search.html" onsubmit="return validateForm(this.elements['q'].value);">
+            <form  action="http://caoyuanqi.github.io/search.html" onsubmit="return validateForm(this.elements['q'].value);">
               <div class="input-field">
                 <input id="search" type="search" name="q" required>
                 <label for="search">Search</label>
@@ -93,7 +93,7 @@
       <div class="self col s12 m5">
         <div class="card">
           <div class="card-image">
-            <img src="http://localhost:8000/theme/images/head.jpg" alt="head"/>
+            <img src="http://caoyuanqi.github.io/theme/images/head.jpg" alt="head"/>
           </div>
           <div class="card-content">
             <p class="center">Blogged by Yuanqi with <span>Passion</span></p>
@@ -110,13 +110,13 @@
       <h5>Recent Post</h5>
       <ul class="collection">
  
-                          <li class="collection-item"><div><a href="http://localhost:8000/emacseclipse">Emacs + Eclipse </a><span class="secondary-content hide-on-small-only"><i class="material-icons">label_outline</i>Jan 16, 2015</span></div></li>
+                          <li class="collection-item"><div><a href="http://caoyuanqi.github.io/emacseclipse">Emacs + Eclipse </a><span class="secondary-content hide-on-small-only"><i class="material-icons">label_outline</i>Jan 16, 2015</span></div></li>
  
-                          <li class="collection-item"><div><a href="http://localhost:8000/myemacsroad">My Emacs Road </a><span class="secondary-content hide-on-small-only"><i class="material-icons">label_outline</i>Jan 13, 2015</span></div></li>
+                          <li class="collection-item"><div><a href="http://caoyuanqi.github.io/myemacsroad">My Emacs Road </a><span class="secondary-content hide-on-small-only"><i class="material-icons">label_outline</i>Jan 13, 2015</span></div></li>
  
-                          <li class="collection-item"><div><a href="http://localhost:8000/orgtoosxcalendar">Import emacs org mode agenda into osx calendar(perl) </a><span class="secondary-content hide-on-small-only"><i class="material-icons">label_outline</i>Jan 09, 2015</span></div></li>
+                          <li class="collection-item"><div><a href="http://caoyuanqi.github.io/orgtoosxcalendar">Import emacs org mode agenda into osx calendar(perl) </a><span class="secondary-content hide-on-small-only"><i class="material-icons">label_outline</i>Jan 09, 2015</span></div></li>
  
-                          <li class="collection-item"><div><a href="http://localhost:8000/hello world">Hello world  <small> from pelican </small> </a><span class="secondary-content hide-on-small-only"><i class="material-icons">label_outline</i>Jan 01, 2015</span></div></li>
+                          <li class="collection-item"><div><a href="http://caoyuanqi.github.io/hello world">Hello world  <small> from pelican </small> </a><span class="secondary-content hide-on-small-only"><i class="material-icons">label_outline</i>Jan 01, 2015</span></div></li>
       </ul>
     </div>
   </div>
