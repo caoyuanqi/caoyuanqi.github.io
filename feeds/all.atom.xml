@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Cao -&gt;Log</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2014-12-17T00:00:00+11:00</updated><entry><title>Hello world</title><link href="/my-super-post" rel="alternate"></link><updated>2014-12-17T00:00:00+11:00</updated><author><name>Yuanqi Cao</name></author><id>tag:,2014-12-17:my-super-post</id><summary type="html"></summary><category term="pelican"></category></entry></feed>

@@ -1,0 +1,240 @@
+/* Mixins */
+body {
+  background-color: #eae8e7; }
+
+/* Elements  */
+/* element's title  */
+.title {
+  font-size: 1.5em;
+  color: #2196f3; }
+
+.nav-wrapper {
+  background-color: #64b5f6; }
+  .nav-wrapper .brand-logo {
+    margin-left: 1.5em; }
+    .nav-wrapper .brand-logo img {
+      height: 1em; }
+
+.collapsible .small {
+  padding: 0em .6em;
+  position: relative;
+  bottom: 0.3em;
+  background-color: #e57373;
+  color: #ffffff; }
+
+.collapsible .collapsible-li {
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+  margin-left: 2em; }
+  .collapsible .collapsible-li .time {
+    width: 10em;
+    color: #64b5f6;
+    margin-right: .5em; }
+
+.self span {
+  color: red; }
+
+.self .card-action i {
+  color: #64b5f6; }
+
+.about-me span {
+  font-weight: bold; }
+
+.about-me span::after {
+  content: " "; }
+
+.recent-post .secondary-content {
+  color: #64b5f6; }
+
+.main {
+  min-height: 40em; }
+
+.footer-copyright {
+  background-color: #64b5f6; }
+
+.post-archive .collection a {
+  color: #64b5f6; }
+  .post-archive .collection a span {
+    color: grey; }
+
+.post-archive .collection a:hover {
+  text-decoration: underline; }
+
+/* this is for the tags  */
+.tags .input-field {
+  width: 50%;
+  margin-top: 0.8em; }
+
+.tags .list-of-tag li {
+  list-style: none;
+  color: #4a4a4a;
+  background-color: #e8e6e3;
+  display: inline;
+  margin-right: 0.8em;
+  padding: 0.3em; }
+  .tags .list-of-tag li span {
+    font-size: .8em;
+    vertical-align: super;
+    font-style: italic; }
+
+.tag h4 {
+  font-size: 1.2em;
+  color: #2196f3;
+  color: #ef9a9a; }
+
+.tag li {
+  list-style: circle; }
+
+/* this is for article page */
+.article .toc li {
+  width: 100%;
+  color: #ef9a9a;
+  list-style: outside;
+  text-align: certer; }
+  .article .toc li a {
+    width: 100%;
+    display: inline-block;
+    text-align: certer; }
+
+.article .more-info h4 {
+  font-size: 1.2em;
+  color: #2196f3; }
+
+.article .more-info a {
+  color: #757575; }
+
+.article .more-info ul li span {
+  font-size: .8em;
+  vertical-align: super;
+  font-style: italic; }
+
+pre {
+  border-radius: 0.2em; }
+
+#comment-message {
+  color: #4a4a4a;
+  font-style: italic; }
+
+.articles_timeline li {
+  display: inline-block;
+  width: 49%; }
+
+.articles_timeline .previous_article:before {
+  content: "<<"; }
+
+.articles_timeline .next_article {
+  text-align: right; }
+
+.articles_timeline .next_article:after {
+  content: ">>"; }
+
+/* This is for the search result page */
+.search-result {
+  height: 20em; }
+  .search-result h4 {
+    font-size: 1.5em;
+    color: #2196f3;
+    position: relative;
+    left: -1em; }
+  .search-result ul h5 {
+    font-size: 1.1em;
+    color: #2196f3;
+    color: red; }
+  .search-result ul li b {
+    color: #e57373; }
+  .search-result ul li a {
+    font-style: italic;
+    color: #4db6ac; }
+
+/* This is for 404 page */
+.not-find h4 {
+  font-size: 1.2em;
+  color: #2196f3; }
+
+.not-find input {
+  max-width: 20em; }
+
+.resume {
+  padding: 2em 3em;
+  border-radius: 0.3em;
+  margin: 2em auto;
+  position: relative;
+  background-color: #fcfcfc; }
+  .resume #skill-set a.btn {
+    background-color: #6cbdfe; }
+  .resume .self-img-container {
+    width: 100%;
+    perspective: 80em; }
+    .resume .self-img-container #self-img-flip {
+      width: 100%;
+      position: absolute;
+      transform-style: preserve-3d;
+      transition: transform 1s; }
+      .resume .self-img-container #self-img-flip .front, .resume .self-img-container #self-img-flip .back {
+        display: block;
+        position: absolute;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+        backface-visibility: hidden; }
+      .resume .self-img-container #self-img-flip .back {
+        transform: rotateY(180deg); }
+    .resume .self-img-container .flipped {
+      transform: rotateY(180deg); }
+  .resume .self-descript {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 3.5em;
+    color: white; }
+    .resume .self-descript h4 {
+      font-size: 2em;
+      color: #2196f3;
+      color: white; }
+  .resume .self-info {
+    font-size: 1.1em; }
+  .resume .card .material-icons {
+    position: absolute;
+    right: 0.5em;
+    top: 0.3em; }
+  .resume .card img {
+    padding: 2em; }
+  .resume .card .card-title {
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold; }
+  .resume .card .card-action {
+    text-align: center; }
+  .resume .project .tech-spec li {
+    display: inline-block;
+    margin-right: 0.5em;
+    font-style: oblique;
+    font-variant: small-caps; }
+    .resume .project .tech-spec li:first-child {
+      font-weight: bold;
+      font-variant: normal;
+      font-style: normal;
+      margin-left: .5em; }
+  .resume .work-experience .work-title {
+    margin-left: .5em; }
+  .resume .work-experience ul li {
+    list-style-type: disc;
+    margin-left: 1em; }
+  .resume .rewords .card-panel i {
+    display: inline-block;
+    margin-right: 0.8em; }
+  .resume .resume-file .col {
+    text-align: center; }
+
+/* in resume page */
+#lan-skill ul li, #frame-skill ul li {
+  display: inline-block;
+  font-style: italic;
+  margin-right: 0.5em; }
+  #lan-skill ul li:first-child, #frame-skill ul li:first-child {
+    font-weight: bold;
+    font-style: oblique; }

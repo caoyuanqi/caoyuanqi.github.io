@@ -1,78 +1,90 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <meta charset="utf-8"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Yuanqi Cao" />
-        <meta name="copyright" content="Yuanqi Cao" />
+  <head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Yuanqi Cao" />
+    <meta name="copyright" content="Yuanqi Cao" />
 
-        <meta name="description" content="Emacs and Eclipse
+    <meta name="description" content="Emacs and Eclipse
 " />
 <meta name="keywords" content="emacs, programming, emacs eclipse" />
-        <title>Emacs + Eclipse  · Yuanqi Cao Blog
+    <title>Emacs + Eclipse  · Yuanqi Cao Blog
 </title>
-        <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
-        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="http://caoyuanqi.github.io/theme/css/style.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="http://caoyuanqi.github.io/theme/css/solarizedlight.css" media="screen">
-        <link rel="shortcut icon" href="http://caoyuanqi.github.io/theme/images/favicon.ico" type="image/x-icon" />
-        <link rel="apple-touch-icon" href="http://caoyuanqi.github.io/theme/images/apple-touch-icon.png" />
-        <link rel="apple-touch-icon" sizes="57x57" href="http://caoyuanqi.github.io/theme/images/apple-touch-icon-57x57.png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="http://caoyuanqi.github.io/theme/images/apple-touch-icon-72x72.png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="http://caoyuanqi.github.io/theme/images/apple-touch-icon-114x114.png" />
-        <link rel="apple-touch-icon" sizes="144x144" href="http://caoyuanqi.github.io/theme/images/apple-touch-icon-144x144.png" />
-        <link rel="icon" href="http://caoyuanqi.github.io/theme/images/apple-touch-icon-144x144.png" />
-    </head>
-    <!-- end of head -->
-    <body>
-        <div id="content-sans-footer">
-        <div class="navbar navbar-static-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </a>
-                    <a class="brand" href="http://caoyuanqi.github.io/"><span class=site-name> <span style="colour:red;">Yuanqi Cao</span> <span style="color:darkgreen;">Blog</span> </span> <img src="http://caoyuanqi.github.io/theme/images/cao.png" style="width:15px;height:15"></a>
-                    <div class="nav-collapse collapse">
-                        <ul class="nav pull-right top-menu">
-                            <li ><a href="http://caoyuanqi.github.io/index.html">Home</a></li>
-                            <li ><a href="http://caoyuanqi.github.io/categories.html">Categories</a></li>
-                            <li ><a href="http://caoyuanqi.github.io/tags.html">Tags</a></li>
-                            <li ><a href="http://caoyuanqi.github.io/archives.html">Archives</a></li>
-                            <li><form class="navbar-search" action="http://caoyuanqi.github.io/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row-fluid">
-                <div class="span1"></div>
-                <div class="span10">
-<article>
-<div class="row-fluid">
-    <header class="page_header span10 offset2">
-    <h1><a href="http://caoyuanqi.github.io/emacseclipse"> Emacs + Eclipse  </a></h1>
-    </header>
-</div>
+    <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/css/solarizedlight.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/css/vendor.min.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/css/main.css" media="screen">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
 
-<div class="row-fluid">
-    <div class="span2 table-of-content">
-        <nav>
-        <h4>Contents</h4>
+    <link rel="shortcut icon" href="http://localhost:8000/theme/images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="http://localhost:8000/theme/images/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="http://localhost:8000/theme/images/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="http://localhost:8000/theme/images/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="http://localhost:8000/theme/images/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="http://localhost:8000/theme/images/apple-touch-icon-144x144.png" />
+    <link rel="icon" href="http://localhost:8000/theme/images/apple-touch-icon-144x144.png" />
+    
+  </head>
+  <!-- end of head -->
+  <body>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">
+          <img src="http://localhost:8000/theme/images/logo.png" class="" alt="Logo" />
+        </a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li ><a href="http://localhost:8000/index.html">Home</a></li>
+          <li ><a href="http://localhost:8000/resume.html">Resume</a></li>
+          <li ><a href="http://localhost:8000/categories.html">Categories</a></li>
+          <li ><a href="http://localhost:8000/tags.html">Tags</a></li>
+          <li ><a href="http://localhost:8000/archives.html">Archives</a></li>
+          <li>
+            <form  action="http://localhost:8000/search.html" onsubmit="return validateForm(this.elements['q'].value);">
+              <div class="input-field">
+                <input id="tipue_search_input" type="search" name="q" required>
+                <label for="tipue_search_input"><i class="material-icons">search</i></label>
+              </div>
+            </form>
+          </li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li ><a href="http://localhost:8000/index.html">Home</a></li>
+          <li  ><a href="resume.html">Resume</a></li>
+          <li ><a href="http://localhost:8000/categories.html">Categories</a></li>
+          <li ><a href="http://localhost:8000/tags.html">Tags</a></li>
+          <li ><a href="http://localhost:8000/archives.html">Archives</a></li>
+          <li>
+            <form  action="http://localhost:8000/search.html" onsubmit="return validateForm(this.elements['q'].value);">
+              <div class="input-field">
+                <input id="search" type="search" name="q" required>
+                <label for="search">Search</label>
+
+              </div>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+<div class="main">
+  <div class="container">
+    <div class="row article">
+      <div class="toc col m2 s12">
         <div class="toc" id="">
 
 <ul class="simple">
 <li><a class="reference internal" href="#some-feature" id="id1">some feature</a></li>
 </ul>
 </div>
-        </nav>
-    </div>
-    <div class="span8 article-content">
+      </div>
 
-            
+      <div class="article-content col m8 s12 ">
+        
 <p>Emacs rocks but not for the java project, for spring, hibernate the smart auto completing of Eclipe still is the best tools for the Emacs. Eclipse includes the Emacs keybind but that is not powerful enough for coding for Java programmer. Luckily, Emacs ++ could bring some cool feature for emacser.</p>
 <div class="section" id="some-feature">
 <h2><a class="toc-backref" href="#id1">some feature</a></h2>
@@ -91,7 +103,7 @@
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
                     data-disqus-identifier="cao-Emacs+"
-                href="http://caoyuanqi.github.io/emacseclipse#disqus_thread">
+                href="http://localhost:8000/emacseclipse#disqus_thread">
                 Comments
             </a>
         </div>
@@ -102,7 +114,7 @@
 <script type="text/javascript">
     var disqus_shortname = 'caoyuanqigithubio';
         var disqus_identifier = 'cao-Emacs+';
-    var disqus_url = 'http://caoyuanqi.github.io/emacseclipse';
+    var disqus_url = 'http://localhost:8000/emacseclipse';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -117,54 +129,42 @@
     </div>
 </div>
 </section>
-            <aside>
-            <hr/>
-            <nav>
-            <ul class="articles_timeline">
+        <aside>
+          <hr>
+          <ul class="articles_timeline">
+                <li class="previous_article"><a href="myemacsroad" title="Previous: My Emacs Road">My Emacs Road</a></li>
+          </ul>
+        </aside>
+      </div> <!-- article content -->
+      <div class="more-info col m2 s12">
  
-                <li class="previous_article">« <a href="http://caoyuanqi.github.io/myemacsroad" title="Previous: My Emacs Road">My Emacs Road</a></li>
-            </ul>
-            </nav>
-            </aside>
-        </div>
-        <section>
-        <div class="span2" style="float:right;font-size:0.9em;">
- 
-            <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2015-01-16T00:00:00+11:00">Jan 16, 2015</time>
-            <h4>Category</h4>
-            <a class="category-link" href="/categories.html#programming-ref">programming</a> 
-            <h4>Tags</h4>
-            <ul class="list-of-tags tags-in-article"> 
-                <li><a href="/tags.html#emacs-ref">emacs
-                    <span>3</span>
+        <h4>Published</h4>
+        <time pubdate="pubdate" datetime="2015-01-16T00:00:00+11:00">Jan 16, 2015</time>
+        <h4>Category</h4>
+        <a class="category-link" href="/categories.html#programming-ref">programming</a> 
+        <h4>Tags</h4>
+        <ul class="list-of-tags tags-in-article"> 
+          <li><a href="/tags.html#emacs-ref">emacs
+              <span>3</span>
 </a></li>
-            </ul>
+        </ul>
 
-        </div>
-        </section>
-</div>
-</article>
-                </div>
-                <div class="span1"></div>
-            </div>
-        </div>
+            
+      </div>
     </div>
-<footer>
-<div id="footer">
-    <ul class="footer-content">
-        <li class="elegant-license"><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"> Cao ->log</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://caoyuanqi.github.io" property="cc:attributionName" rel="cc:attributionURL">Yuanqi Cao</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</li>
-        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
-    </ul>
-</div>
-</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
-        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
-        <script>
-            function validateForm(query)
-            {
-                return (query.length > 0);
-            }
-        </script>
+  </div>
+</div> <!-- end of main -->
+
+
+
+      
+  <div class="footer-copyright">
+      <div class="container grey-text text-lighten-3">
+        Copy right @2016 Yuanqi
+      </div>
+    </div>        <script src="/theme/js/vendor.min.js"></script>
+    <script src="/theme/js/main.js"></script>
+
 
 <script type="text/javascript">
     var disqus_shortname = 'caoyuanqigithubio';
@@ -183,7 +183,7 @@
                 {
                     var hash_str = '#disqus_thread';
                 }
-                $(hash_str).collapse({
+              $(hash_str).collapse({
                     toggle: true
                     })
             }
@@ -192,5 +192,5 @@
         <script type="text/javascript" language="JavaScript">
             uncollapse(); 
         </script>
-    </body>
+  </body>
 </html>
