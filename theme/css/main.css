@@ -131,8 +131,9 @@ pre {
 /* This is for the search result page */
 .search-result {
   height: 20em; }
-  .search-result h4 {
-    font-size: 1.5em;
+  .search-result #tipue_search_results_count,
+  .search-result #tipue_search_warning_head {
+    font-size: 2em;
     color: #2196f3;
     position: relative;
     left: -1em; }
