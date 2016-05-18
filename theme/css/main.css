@@ -164,6 +164,7 @@ pre {
   .resume #skill-set a.btn {
     background-color: #6cbdfe; }
   .resume .self-img-container {
+    height: 1px;
     width: 100%;
     perspective: 80em; }
     .resume .self-img-container #self-img-flip {
