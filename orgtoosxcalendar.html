@@ -76,47 +76,47 @@
     <div class="row article">
 
       <div class="article-content col m8 s12 offset-m2">
-        <p>In the daily life, I prefer to use emacs org mode to manage my time and I also use iphone and macbook. The org mode is a perfect way to manage your time but iphone and calendar is a good way to track your time. So is there a good way to let them work better for&nbsp;me?</p>
-<p>I tried org <a class="reference external" href="https://itunes.apple.com/us/app/mobileorg/id634225528?ls=1&amp;mt=8">mobile</a> before, but it is really hard to use in iphone , and it will create some mark line in the pushed event which make the org file more hard to read. I also tryed <a class="reference external" href="http://orgmode.org/worg/org-contrib/org-mac-iCal.html">org-mac-ical.el</a> but it is out of date and it can not work in <span class="caps">OSX</span> 10.10&nbsp;now.</p>
-<p>There is no good solution on the Internet. So one year ago,  I made a perl script to parse the org file and import events into Calendar in <span class="caps">OSX</span>. Because it calls relative apple-script command to import events, it will work fine for further version of <span class="caps">OSX</span> without any&nbsp;changes.</p>
+        <p>In the daily life, I prefer to use emacs org mode to manage my time and I also use iphone and macbook. The org mode is a perfect way to manage your time but iphone and calendar is a good way to track your time. So is there a good way to let them work better for me?</p>
+<p>I tried org <a class="reference external" href="https://itunes.apple.com/us/app/mobileorg/id634225528?ls=1&amp;mt=8">mobile</a> before, but it is really hard to use in iphone , and it will create some mark line in the pushed event which make the org file more hard to read. I also tryed <a class="reference external" href="http://orgmode.org/worg/org-contrib/org-mac-iCal.html">org-mac-ical.el</a> but it is out of date and it can not work in <span class="caps">OSX</span> 10.10 now.</p>
+<p>There is no good solution on the Internet. So one year ago,  I made a perl script to parse the org file and import events into Calendar in <span class="caps">OSX</span>. Because it calls relative apple-script command to import events, it will work fine for further version of <span class="caps">OSX</span> without any changes.</p>
 <p>It will automaticly import an event into osx calendar when you assigned a time to it. If your iphone is connected into cloud, it will of course alert your automaticly.  And you can check your schedule on both org agenda and your iphone and clendar on the <span class="caps">OSX</span>.</p>
-<p>The logic is&nbsp;simple:</p>
+<p>The logic is simple:</p>
 <pre class="literal-block">
 1. When emacs store the org file in org mode or org agenda, call the script
 2. The script will scan the org file and try to import the files into calendar one by one
 3. When it finish scan it will store the added event time into time.txt
 4. When any time is added, the event started with the same time will not be added
 </pre>
-<p>To use the script, you should added this <a class="reference external" href="https://github.com/caoyuanqi/scripts/blob/master/_org_file_handler">script</a> into your <span class="caps">PATH</span> and give it excutive&nbsp;right.</p>
-<p>Added this line into your emacs setting files, there will add a hook and call the script every time you store any org&nbsp;file</p>
-<div class="highlight"><pre><span></span><span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;after-save-hook</span>
-       <span class="o">&#39;</span><span class="p">(</span><span class="nb">lambda</span> <span class="p">()</span>
-          <span class="p">((</span><span class="k">if</span> <span class="p">(</span><span class="k">or</span> <span class="p">(</span><span class="nf">eq</span> <span class="nv">major-mode</span> <span class="ss">&#39;org-mode</span><span class="p">)</span> <span class="p">(</span><span class="nf">eq</span> <span class="nv">major-mode</span> <span class="ss">&#39;org-agenda-mode</span><span class="p">))</span>
+<p>To use the script, you should added this <a class="reference external" href="https://github.com/caoyuanqi/scripts/blob/master/_org_file_handler">script</a> into your <span class="caps">PATH</span> and give it excutive right.</p>
+<p>Added this line into your emacs setting files, there will add a hook and call the script every time you store any org file</p>
+<div class="highlight"><pre><span></span><span class="p">(</span><span class="nv">add-hook</span> <span class="ss">'after-save-hook</span>
+       <span class="o">'</span><span class="p">(</span><span class="nb">lambda</span> <span class="p">()</span>
+          <span class="p">((</span><span class="k">if</span> <span class="p">(</span><span class="k">or</span> <span class="p">(</span><span class="nf">eq</span> <span class="nv">major-mode</span> <span class="ss">'org-mode</span><span class="p">)</span> <span class="p">(</span><span class="nf">eq</span> <span class="nv">major-mode</span> <span class="ss">'org-agenda-mode</span><span class="p">))</span>
                 <span class="p">(</span><span class="k">progn</span>
-                  <span class="p">(</span><span class="k">setq</span> <span class="nv">org-add-event-command</span> <span class="p">(</span><span class="nf">concat</span> <span class="s">&quot;&lt; &quot;</span> <span class="nf">buffer-file-name</span><span class="p">))</span>
-                  <span class="p">(</span><span class="nv">call-process-shell-command</span> <span class="s">&quot;_org_file_handler&quot;</span> <span class="no">nil</span> <span class="no">nil</span> <span class="no">nil</span> <span class="nv">org-add-event-command</span><span class="p">))))))</span>
+                  <span class="p">(</span><span class="k">setq</span> <span class="nv">org-add-event-command</span> <span class="p">(</span><span class="nf">concat</span> <span class="s">"&lt; "</span> <span class="nf">buffer-file-name</span><span class="p">))</span>
+                  <span class="p">(</span><span class="nv">call-process-shell-command</span> <span class="s">"_org_file_handler"</span> <span class="no">nil</span> <span class="no">nil</span> <span class="no">nil</span> <span class="nv">org-add-event-command</span><span class="p">))))))</span>
 </pre></div>
-<p>You should decide a way for the time.txt this will store all time stamp you already imported in the&nbsp;script</p>
-<div class="highlight"><pre><span></span><span class="nv">$time_file</span> <span class="o">=</span> <span class="s">&quot;where/your/want/to/put/the/time.txt&quot;</span>
+<p>You should decide a way for the time.txt this will store all time stamp you already imported in the script</p>
+<div class="highlight"><pre><span></span><span class="nv">$time_file</span> <span class="o">=</span> <span class="s">"where/your/want/to/put/the/time.txt"</span>
 </pre></div>
-<p>Most importantly, you should arrange your org file into this style, because this script will scan the * header as the calendar it want to insert the&nbsp;event:</p>
+<p>Most importantly, you should arrange your org file into this style, because this script will scan the * header as the calendar it want to insert the event:</p>
 <pre class="literal-block">
 * calendar name in osx calendar
 ** Other thing
 </pre>
-<p>For example, if I want to insert an event named: exercise into a calendar named life in osx calendar, I will make this even like&nbsp;below:</p>
+<p>For example, if I want to insert an event named: exercise into a calendar named life in osx calendar, I will make this even like below:</p>
 <pre class="literal-block">
 * life
 ** exercise
 SCHEDULED: &lt;2015-01-09 Fri 13:00-14:00&gt;
 </pre>
-<p>Because it is a script I made almost 1 year ago and it works very  well for me, there are some thing need to do better, but if there is no big problem, I won&#8217;t fix it, because maybe I will rewrite the script in Python in object oritential style. So if there are any interesting ideas to let me&nbsp;know?</p>
+<p>Because it is a script I made almost 1 year ago and it works very  well for me, there are some thing need to do better, but if there is no big problem, I won’t fix it, because maybe I will rewrite the script in Python in object oritential style. So if there are any interesting ideas to let me know?</p>
 <pre class="literal-block">
 A. The calendar have to restart to make the events be refreshed. (I think it is apple's problem)
 B. time.txt maybe should be clean up, but it is not a big issue for us
 C. I tell the application every time I want to add an event, I should be tell once and add many, but I am really lazy to change that. ^-^
 </pre>
-<p>I think it will work fine for you.&nbsp;enjoy!</p>
+<p>I think it will work fine for you. enjoy!</p>
 
 <section>
 <p id="comment-message">Leave me a message </p>
