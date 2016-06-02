@@ -108,6 +108,10 @@ body {
   vertical-align: super;
   font-style: italic; }
 
+.article-content h2{
+    font-size:1.3em;
+}
+
 pre {
   border-radius: 0.2em; }
 
