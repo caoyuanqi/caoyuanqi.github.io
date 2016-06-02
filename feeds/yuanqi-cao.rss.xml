@@ -20,7 +20,7 @@ I just want to use emacs. Emacs provide a good auto-complete function for html (
 &lt;li&gt;Better Keybind, because I am using evil mode in emacs, so that means I could use vi and emacs together to code with the help of Eclipse.&lt;/li&gt;
 &lt;li&gt;Here is a example to show a problem report in my Java Spring Project (The import java.util.HashSet is never used).&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;![Problem report in Spring Project]({filename}/images/emacs-eclim-problem.png)&lt;/p&gt;
+&lt;img alt="Problem report in Spring Project" src="http://caoyuanqi.github.io/images/emacs-eclim-problem.png"/&gt;
 &lt;/div&gt;
 &lt;div class="section" id="some-tips-and-pitfall"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id4"&gt;Some Tips and pitfall&lt;/a&gt;&lt;/h2&gt;
