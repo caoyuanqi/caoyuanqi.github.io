@@ -1,5 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Yuanqi Cao Blog</title><link href="http://caoyuanqi.github.io/" rel="alternate"></link><link href="http://caoyuanqi.github.io/feeds/yuanqi-cao.atom.xml" rel="self"></link><id>http://caoyuanqi.github.io/</id><updated>2015-01-16T00:00:00+11:00</updated><entry><title>Emacs + Eclipse</title><link href="http://caoyuanqi.github.io/emacseclipse" rel="alternate"></link><updated>2015-01-16T00:00:00+11:00</updated><author><name>Yuanqi Cao</name></author><id>tag:caoyuanqi.github.io,2015-01-16:emacseclipse</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Yuanqi Cao Blog</title><link href="http://caoyuanqi.github.io/" rel="alternate"></link><link href="http://caoyuanqi.github.io/feeds/yuanqi-cao.atom.xml" rel="self"></link><id>http://caoyuanqi.github.io/</id><updated>2016-06-02T00:00:00+10:00</updated><entry><title>Emacs java development</title><link href="http://caoyuanqi.github.io/emacs_java_environment" rel="alternate"></link><updated>2016-06-02T00:00:00+10:00</updated><author><name>Yuanqi Cao</name></author><id>tag:caoyuanqi.github.io,2016-06-02:emacs_java_environment</id><summary type="html">
+&lt;p&gt;Emacs and java are not good friends, for most of java programmers, the best choice of programming tools are &lt;span class="caps"&gt;IDE&lt;/span&gt;, for example Eclipse or IntelliJ &lt;span class="caps"&gt;IDEA&lt;/span&gt;, I agree that &lt;span class="caps"&gt;IDE&lt;/span&gt; is very friendly for Java programming especially for the web development for java, Most of my time is spent on &lt;span class="caps"&gt;IDE&lt;/span&gt; as well, I am a Emacs+ user in Eclipse, the experience is similar. However, I think there are some time for me to use emacs rather than &lt;span class="caps"&gt;IDE&lt;/span&gt;.&lt;/p&gt;
+&lt;div class="section" id="when-i-just-open-emacs-to-code-rather-than-eclipse"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id1"&gt;When I just open Emacs to code rather than Eclipse&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;1. When I want to focus on the design of code and structure of my programe
+For me, &lt;span class="caps"&gt;IDE&lt;/span&gt; is too annoying when I want to just write some interface or designing code. &lt;span class="caps"&gt;IDE&lt;/span&gt; sometimes just pop up a lot of auto completting code and lead me to another direction.
+2. When I want to combine the frontend code and backend code together.
+I just want to use emacs. Emacs provide a good auto-complete function for html(Emmet), &lt;span class="caps"&gt;CSS&lt;/span&gt; and &lt;span class="caps"&gt;JS&lt;/span&gt;, I don’t think Eclipse is good enough to handle these together. I don’t like to switch Emacs and Eclipse very often, that will make me lost.
+3. When I want to learn something new in Java. Emacs will make me focus on these feature and try to remember these new features by head.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="solution"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id2"&gt;Solution:&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;There are three option for java programming in Emacs. One is &lt;cite&gt;Malarbra &amp;lt;https://github.com/m0smith/malabar-mode&amp;gt;&lt;/cite&gt;, but I didn’t successfully make that run, and I think you have to use some limited version of maven to make that run according to the specification. Another choice is &lt;cite&gt;&lt;span class="caps"&gt;JDEE&lt;/span&gt; &amp;lt;http://jdee.sourceforge.net&amp;gt;&lt;/cite&gt;, which is a little old but a new version is under development. I think that is a good choice but still need some time to be ready. The last choice is &lt;cite&gt;Emacs-eclim &amp;lt;https://github.com/senny/emacs-eclim&amp;gt;&lt;/cite&gt;, which is actually a shell for eclipse server, actually we still use Eclipse but use Emacs as a proxy and I think that is the best choice so far. Another mode your should never forget is yassnippet, for java install the this mode &lt;cite&gt;yasnippet-java-mode &amp;lt;https://github.com/nekop/yasnippet-java-mode&amp;gt;&lt;/cite&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="some-benefit"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id3"&gt;Some Benefit&lt;/a&gt;&lt;/h2&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Almost everything for Eclipse, you could insert getter and setter, problem report, auto import, auto suggest, but everything is called by yourself. So you could focus on the structure and correct errors after you finish the design.&lt;/li&gt;
+&lt;li&gt;Keybind, because I am using evil mode in emacs, so that means I could use vi and emacs together to code with the help of Eclipse.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class="section" id="some-tips-and-pitfall"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id4"&gt;Some Tips and pitfall&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Don’t use eclimd, which is a eclipse server in Emacs. That would make your Emacs crash. Instead, using Eclimd in terminal, I tried that in Mac, everything is &lt;span class="caps"&gt;OK&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;You may need to set the varialble of eclim-executable variable in emacs to taget the eclim if you install Eclipse and Eclim in other place.&lt;/p&gt;
+&lt;p&gt;Finally, install &lt;cite&gt;eclim &amp;lt;http://eclim.org&amp;gt;&lt;/cite&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;require-package&lt;/span&gt; &lt;span class="ss"&gt;'emacs-eclim&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="c1"&gt;;;; enable the eclim&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;require&lt;/span&gt; &lt;span class="ss"&gt;'eclim&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;global-eclim-mode&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c1"&gt;;; regular auto-complete initialization&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;require&lt;/span&gt; &lt;span class="ss"&gt;'auto-complete-config&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;ac-config-default&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;;; add the emacs-eclim source&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;require&lt;/span&gt; &lt;span class="ss"&gt;'ac-emacs-eclim-source&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;ac-emacs-eclim-config&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;setq&lt;/span&gt; &lt;span class="nv"&gt;eclim-executable&lt;/span&gt; &lt;span class="s"&gt;"/Applications/Eclipse.app/Contents/Eclipse/eclim"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;provide&lt;/span&gt; &lt;span class="ss"&gt;'init-eclim&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="emacs java"></category></entry><entry><title>Emacs + Eclipse</title><link href="http://caoyuanqi.github.io/emacseclipse" rel="alternate"></link><updated>2015-01-16T00:00:00+11:00</updated><author><name>Yuanqi Cao</name></author><id>tag:caoyuanqi.github.io,2015-01-16:emacseclipse</id><summary type="html">
 &lt;p&gt;Emacs rocks but not for the java project, for spring, hibernate the smart auto completing of Eclipe still is the best tools for the Emacs. Eclipse includes the Emacs keybind but that is not powerful enough for coding for Java programmer. Luckily, Emacs ++ could bring some cool feature for emacser.&lt;/p&gt;
 &lt;div class="section" id="some-feature"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id1"&gt;some feature&lt;/a&gt;&lt;/h2&gt;

@@ -6,10 +6,10 @@
     <meta name="author" content="Yuanqi Cao" />
     <meta name="copyright" content="Yuanqi Cao" />
 
-    <meta name="description" content="Emacs and Eclipse
+    <meta name="description" content="Emacs and java
 " />
-<meta name="keywords" content="emacs, programming, emacs eclipse" />
-    <title>Emacs +&nbsp;Eclipse  · Yuanqi Cao Blog
+<meta name="keywords" content="emacs java, programming, emacs java" />
+    <title>Emacs java&nbsp;development  · Yuanqi Cao Blog
 </title>
     <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="http://caoyuanqi.github.io/theme/css/solarizedlight.css" media="screen">
@@ -78,22 +78,55 @@
         <div class="toc" id="">
 
 <ul class="simple">
-<li><a class="reference internal" href="#some-feature" id="id1">some feature</a></li>
+<li><a class="reference internal" href="#when-i-just-open-emacs-to-code-rather-than-eclipse" id="id1">When I just open Emacs to code rather than Eclipse</a></li>
+<li><a class="reference internal" href="#solution" id="id2">Solution:</a></li>
+<li><a class="reference internal" href="#some-benefit" id="id3">Some Benefit</a></li>
+<li><a class="reference internal" href="#some-tips-and-pitfall" id="id4">Some Tips and pitfall</a></li>
 </ul>
 </div>
       </div>
 
       <div class="article-content col m8 s12 ">
         
-<p>Emacs rocks but not for the java project, for spring, hibernate the smart auto completing of Eclipe still is the best tools for the Emacs. Eclipse includes the Emacs keybind but that is not powerful enough for coding for Java programmer. Luckily, Emacs ++ could bring some cool feature for emacser.</p>
-<div class="section" id="some-feature">
-<h2><a class="toc-backref" href="#id1">some feature</a></h2>
+<p>Emacs and java are not good friends, for most of java programmers, the best choice of programming tools are <span class="caps">IDE</span>, for example Eclipse or IntelliJ <span class="caps">IDEA</span>, I agree that <span class="caps">IDE</span> is very friendly for Java programming especially for the web development for java, Most of my time is spent on <span class="caps">IDE</span> as well, I am a Emacs+ user in Eclipse, the experience is similar. However, I think there are some time for me to use emacs rather than <span class="caps">IDE</span>.</p>
+<div class="section" id="when-i-just-open-emacs-to-code-rather-than-eclipse">
+<h2><a class="toc-backref" href="#id1">When I just open Emacs to code rather than Eclipse</a></h2>
+<p>1. When I want to focus on the design of code and structure of my programe
+For me, <span class="caps">IDE</span> is too annoying when I want to just write some interface or designing code. <span class="caps">IDE</span> sometimes just pop up a lot of auto completting code and lead me to another direction.
+2. When I want to combine the frontend code and backend code together.
+I just want to use emacs. Emacs provide a good auto-complete function for html(Emmet), <span class="caps">CSS</span> and <span class="caps">JS</span>, I don’t think Eclipse is good enough to handle these together. I don’t like to switch Emacs and Eclipse very often, that will make me lost.
+3. When I want to learn something new in Java. Emacs will make me focus on these feature and try to remember these new features by head.</p>
+</div>
+<div class="section" id="solution">
+<h2><a class="toc-backref" href="#id2">Solution:</a></h2>
+<p>There are three option for java programming in Emacs. One is <cite>Malarbra &lt;https://github.com/m0smith/malabar-mode&gt;</cite>, but I didn’t successfully make that run, and I think you have to use some limited version of maven to make that run according to the specification. Another choice is <cite><span class="caps">JDEE</span> &lt;http://jdee.sourceforge.net&gt;</cite>, which is a little old but a new version is under development. I think that is a good choice but still need some time to be ready. The last choice is <cite>Emacs-eclim &lt;https://github.com/senny/emacs-eclim&gt;</cite>, which is actually a shell for eclipse server, actually we still use Eclipse but use Emacs as a proxy and I think that is the best choice so far. Another mode your should never forget is yassnippet, for java install the this mode <cite>yasnippet-java-mode &lt;https://github.com/nekop/yasnippet-java-mode&gt;</cite></p>
+</div>
+<div class="section" id="some-benefit">
+<h2><a class="toc-backref" href="#id3">Some Benefit</a></h2>
 <ol class="arabic simple">
-<li>split the windows</li>
-<li>auto complete</li>
-<li><em>delete-by-word</em> and <em>kill-line</em></li>
-<li><em>c-x o</em> to switch buffer</li>
+<li>Almost everything for Eclipse, you could insert getter and setter, problem report, auto import, auto suggest, but everything is called by yourself. So you could focus on the structure and correct errors after you finish the design.</li>
+<li>Keybind, because I am using evil mode in emacs, so that means I could use vi and emacs together to code with the help of Eclipse.</li>
 </ol>
+</div>
+<div class="section" id="some-tips-and-pitfall">
+<h2><a class="toc-backref" href="#id4">Some Tips and pitfall</a></h2>
+<p>Don’t use eclimd, which is a eclipse server in Emacs. That would make your Emacs crash. Instead, using Eclimd in terminal, I tried that in Mac, everything is <span class="caps">OK</span>.</p>
+<p>You may need to set the varialble of eclim-executable variable in emacs to taget the eclim if you install Eclipse and Eclim in other place.</p>
+<p>Finally, install <cite>eclim &lt;http://eclim.org&gt;</cite></p>
+<div class="highlight"><pre><span></span><span class="p">(</span><span class="nv">require-package</span> <span class="ss">'emacs-eclim</span><span class="p">)</span>
+  <span class="c1">;;; enable the eclim</span>
+<span class="p">(</span><span class="nb">require</span> <span class="ss">'eclim</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">global-eclim-mode</span><span class="p">)</span>
+<span class="c1">;; regular auto-complete initialization</span>
+<span class="p">(</span><span class="nb">require</span> <span class="ss">'auto-complete-config</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">ac-config-default</span><span class="p">)</span>
+
+<span class="c1">;; add the emacs-eclim source</span>
+<span class="p">(</span><span class="nb">require</span> <span class="ss">'ac-emacs-eclim-source</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">ac-emacs-eclim-config</span><span class="p">)</span>
+<span class="p">(</span><span class="k">setq</span> <span class="nv">eclim-executable</span> <span class="s">"/Applications/Eclipse.app/Contents/Eclipse/eclim"</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">provide</span> <span class="ss">'init-eclim</span><span class="p">)</span>
+</pre></div>
 </div>
 
 <section>
@@ -102,8 +135,8 @@
     <div class="accordion-group">
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-                    data-disqus-identifier="cao-Emacs+"
-                href="http://caoyuanqi.github.io/emacseclipse#disqus_thread">
+                    data-disqus-identifier="cao-java+emacs"
+                href="http://caoyuanqi.github.io/emacs_java_environment#disqus_thread">
                 Comments
             </a>
         </div>
@@ -113,8 +146,8 @@
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'caoyuanqigithubio';
-        var disqus_identifier = 'cao-Emacs+';
-    var disqus_url = 'http://caoyuanqi.github.io/emacseclipse';
+        var disqus_identifier = 'cao-java+emacs';
+    var disqus_url = 'http://caoyuanqi.github.io/emacs_java_environment';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -132,21 +165,20 @@
         <aside>
           <hr>
           <ul class="articles_timeline">
-                <li class="previous_article"><a href="myemacsroad" title="Previous: My Emacs&nbsp;Road">My Emacs&nbsp;Road</a></li>
-                <li class="next_article"><a href="emacs_java_environment" title="Next: Emacs java&nbsp;development">Emacs java&nbsp;development</a></li>
+                <li class="previous_article"><a href="emacseclipse" title="Previous: Emacs +&nbsp;Eclipse">Emacs +&nbsp;Eclipse</a></li>
           </ul>
         </aside>
       </div> <!-- article content -->
       <div class="more-info col m2 s12">
  
         <h4>Published</h4>
-        <time pubdate="pubdate" datetime="2015-01-16T00:00:00+11:00">Jan 16, 2015</time>
+        <time pubdate="pubdate" datetime="2016-06-02T00:00:00+10:00">Jun 2, 2016</time>
         <h4>Category</h4>
         <a class="category-link" href="/categories.html#programming-ref">programming</a> 
         <h4>Tags</h4>
         <ul class="list-of-tags tags-in-article"> 
-          <li><a href="/tags.html#emacs-ref">emacs
-              <span>3</span>
+          <li><a href="/tags.html#emacs-java-ref">emacs java
+              <span>1</span>
 </a></li>
         </ul>
 
