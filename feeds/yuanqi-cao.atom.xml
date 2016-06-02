@@ -25,7 +25,7 @@ I just want to use emacs. Emacs provide a good auto-complete function for html (
 &lt;p&gt;Don’t use eclimd, which is a eclipse server in Emacs. That would make your Emacs crash. Instead, using Eclimd in terminal, I tried that in Mac, everything is &lt;span class="caps"&gt;OK&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;You may need to set the varialble of eclim-executable variable in emacs to taget the eclim if you install Eclipse and Eclim in other place.&lt;/p&gt;
 &lt;p&gt;Finally, install &lt;a class="reference external" href="http://eclim.org"&gt;eclim&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;For reference.&lt;/p&gt;
+&lt;p&gt;For reference, in my Emacs setting.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;require-package&lt;/span&gt; &lt;span class="ss"&gt;'emacs-eclim&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
   &lt;span class="c1"&gt;;;; enable the eclim&lt;/span&gt;
 &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;require&lt;/span&gt; &lt;span class="ss"&gt;'eclim&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
