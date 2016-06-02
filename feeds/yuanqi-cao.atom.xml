@@ -11,7 +11,7 @@ I just want to use emacs. Emacs provide a good auto-complete function for html(E
 &lt;/div&gt;
 &lt;div class="section" id="solution"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id2"&gt;Solution:&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;There are three option for java programming in Emacs. One is &lt;cite&gt;Malarbra &amp;lt;https://github.com/m0smith/malabar-mode&amp;gt;&lt;/cite&gt;, but I didn’t successfully make that run, and I think you have to use some limited version of maven to make that run according to the specification. Another choice is &lt;cite&gt;&lt;span class="caps"&gt;JDEE&lt;/span&gt; &amp;lt;http://jdee.sourceforge.net&amp;gt;&lt;/cite&gt;, which is a little old but a new version is under development. I think that is a good choice but still need some time to be ready. The last choice is &lt;cite&gt;Emacs-eclim &amp;lt;https://github.com/senny/emacs-eclim&amp;gt;&lt;/cite&gt;, which is actually a shell for eclipse server, actually we still use Eclipse but use Emacs as a proxy and I think that is the best choice so far. Another mode your should never forget is yassnippet, for java install the this mode &lt;cite&gt;yasnippet-java-mode &amp;lt;https://github.com/nekop/yasnippet-java-mode&amp;gt;&lt;/cite&gt;&lt;/p&gt;
+&lt;p&gt;There are three option for java programming in Emacs. One is &lt;a class="reference external" href="https://github.com/m0smith/malabar-mode"&gt;Malarbra&lt;/a&gt;, but I didn’t successfully make that run, and I think you have to use some limited version of maven to make that run according to the specification. Another choice is &lt;cite&gt;&lt;span class="caps"&gt;JDEE&lt;/span&gt; &amp;lt;http://jdee.sourceforge.net&amp;gt;&lt;/cite&gt;, which is a little old but a new version is under development. I think that is a good choice but still need some time to be ready. The last choice is &lt;a class="reference external" href="https://github.com/senny/emacs-eclim"&gt;Emacs-eclim&lt;/a&gt;, which is actually a shell for eclipse server, actually we still use Eclipse but use Emacs as a proxy and I think that is the best choice so far. Another mode your should never forget is yassnippet, for java install the this mode &lt;a class="reference external" href="https://github.com/nekop/yasnippet-java-mode"&gt;yasnippet-java-mode&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="some-benefit"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id3"&gt;Some Benefit&lt;/a&gt;&lt;/h2&gt;
@@ -24,7 +24,8 @@ I just want to use emacs. Emacs provide a good auto-complete function for html(E
 &lt;h2&gt;&lt;a class="toc-backref" href="#id4"&gt;Some Tips and pitfall&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Don’t use eclimd, which is a eclipse server in Emacs. That would make your Emacs crash. Instead, using Eclimd in terminal, I tried that in Mac, everything is &lt;span class="caps"&gt;OK&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;You may need to set the varialble of eclim-executable variable in emacs to taget the eclim if you install Eclipse and Eclim in other place.&lt;/p&gt;
-&lt;p&gt;Finally, install &lt;cite&gt;eclim &amp;lt;http://eclim.org&amp;gt;&lt;/cite&gt;&lt;/p&gt;
+&lt;p&gt;Finally, install &lt;a class="reference external" href="http://eclim.org"&gt;eclim&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;For reference.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;require-package&lt;/span&gt; &lt;span class="ss"&gt;'emacs-eclim&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
   &lt;span class="c1"&gt;;;; enable the eclim&lt;/span&gt;
 &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;require&lt;/span&gt; &lt;span class="ss"&gt;'eclim&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
