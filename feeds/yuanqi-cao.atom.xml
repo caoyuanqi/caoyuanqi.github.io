@@ -43,6 +43,7 @@ I just want to use emacs. Emacs provide a good auto-complete function for html (
 &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;setq&lt;/span&gt; &lt;span class="nv"&gt;eclim-executable&lt;/span&gt; &lt;span class="s"&gt;"/Applications/Eclipse.app/Contents/Eclipse/eclim"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;provide&lt;/span&gt; &lt;span class="ss"&gt;'init-eclim&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;However, I have to mention &lt;span class="caps"&gt;IDE&lt;/span&gt; is still the best time effective solution to Java development.&lt;/p&gt;
 &lt;/div&gt;
 </summary><category term="emacs java"></category></entry><entry><title>Emacs + Eclipse</title><link href="http://caoyuanqi.github.io/emacseclipse" rel="alternate"></link><updated>2015-01-16T00:00:00+11:00</updated><author><name>Yuanqi Cao</name></author><id>tag:caoyuanqi.github.io,2015-01-16:emacseclipse</id><summary type="html">
 &lt;p&gt;Emacs rocks but not for the java project, for spring, hibernate the smart auto completing of Eclipe still is the best tools for the Emacs. Eclipse includes the Emacs keybind but that is not powerful enough for coding for Java programmer. Luckily, Emacs ++ could bring some cool feature for emacser.&lt;/p&gt;
