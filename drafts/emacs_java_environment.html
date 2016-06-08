@@ -78,20 +78,31 @@
         <div class="toc" id="">
 
 <ul class="simple">
-<li><a class="reference internal" href="#when-i-just-open-emacs-to-code-rather-than-eclipse" id="id1">When I just open Emacs to code rather than Eclipse</a></li>
-<li><a class="reference internal" href="#solution" id="id2">Solution:</a></li>
-<li><a class="reference internal" href="#some-benefit" id="id3">Some Benefit</a></li>
-<li><a class="reference internal" href="#some-tips-and-pitfall" id="id4">Some Tips and pitfall</a></li>
+<li><a class="reference internal" href="#todo" id="id1"><span class="caps">TODO</span></a></li>
+<li><a class="reference internal" href="#steps" id="id2">Steps:</a></li>
+<li><a class="reference internal" href="#when-i-just-open-emacs-to-code-rather-than-eclipse" id="id3">When I just open Emacs to code rather than Eclipse</a></li>
+<li><a class="reference internal" href="#solution" id="id4">Solution:</a></li>
+<li><a class="reference internal" href="#some-benefit" id="id5">Some Benefit</a></li>
+<li><a class="reference internal" href="#some-tips-and-pitfall" id="id6">Some Tips and pitfall</a></li>
 </ul>
 </div>
       </div>
 
       <div class="article-content col m8 s12 ">
         
-<p>There are some routing thing a programmer have to do, one of these thing for a frontend programmer maybe refresh the browser, as a Emacs programmer, I find a good model named <em>“</em></p>
+<div class="section" id="todo">
+<h2><a class="toc-backref" href="#id1"><span class="caps">TODO</span></a></h2>
+<p><span class="caps">TODO</span>: Using gulp to antomative complile code in <span class="caps">SCSS</span>, Tpyescript, Coffeescript or other script.</p>
+<p>Why: <em>`impatience mode &lt;https://github.com/skeeto/impatient-mode&gt;`</em> is not good enough to handle some pre-processing language like <span class="caps">SASS</span>. We need to combine the devlopment process with producting process.</p>
+</div>
+<div class="section" id="steps">
+<h2><a class="toc-backref" href="#id2">Steps:</a></h2>
+<p>1. require
+There are some routing thing a programmer have to do, one of these thing for a frontend programmer maybe refresh the browser, as a Emacs programmer, I find a good model named <em>`impatience mode &lt;https://github.com/skeeto/impatient-mode&gt;`</em>, which will serve the content in a local server writen by lisp and detect the change and refresh the page for yourself. For css that is very handful and good enough, however, for modern web development that is not good enough, because we need to use some language like <span class="caps">SASS</span> or Typescript which require us to process. In this situation, we have to use more complex tools. Like gulp, I just like to note down</p>
 <p>Emacs and java are not good friends, for most of java programmers, the best choice of programming tools are <span class="caps">IDE</span>, for example Eclipse or IntelliJ <span class="caps">IDEA</span>, I agree that <span class="caps">IDE</span> is very friendly for Java programming especially for the web development for java, Most of my time is spent on <span class="caps">IDE</span> as well, I am a Emacs+ user in Eclipse, the experience is similar. However, I think there are some time for me to use emacs rather than <span class="caps">IDE</span>.</p>
+</div>
 <div class="section" id="when-i-just-open-emacs-to-code-rather-than-eclipse">
-<h2><a class="toc-backref" href="#id1">When I just open Emacs to code rather than Eclipse</a></h2>
+<h2><a class="toc-backref" href="#id3">When I just open Emacs to code rather than Eclipse</a></h2>
 <p>1. When I want to focus on the design of code and structure of my programe
 , <span class="caps">IDE</span> is too annoying when I want to just write some interface or designing code. <span class="caps">IDE</span> sometimes just pop up a lot of code suggest andmay lead me to another direction.
 2. When I want to combine the frontend code and backend code together.
@@ -99,18 +110,18 @@ I just want to use emacs. Emacs provide a good auto-complete function for html (
 3. When I want to learn something new in Java. Emacs will make me focus on these features and try to remember these new features by head.</p>
 </div>
 <div class="section" id="solution">
-<h2><a class="toc-backref" href="#id2">Solution:</a></h2>
+<h2><a class="toc-backref" href="#id4">Solution:</a></h2>
 <p>There are three options for java programming in Emacs. One is <a class="reference external" href="https://github.com/m0smith/malabar-mode">Malarbra</a>, but I didn’t successfully make that run, and I think you have to use some limited version of maven to make that run according to the specification. Another choice is <cite><span class="caps">JDEE</span> &lt;http://jdee.sourceforge.net&gt;</cite>, which is a little old but a new version is under development. I think that is a good choice but still need some time to be ready. The last choice is <a class="reference external" href="https://github.com/senny/emacs-eclim">Emacs-eclim</a>, which is actually a shell for eclipse server, actually we still use Eclipse but use Emacs as a proxy and I think that is the best choice so far. Another mode your should never forget is yassnippet, for java install the this mode <a class="reference external" href="https://github.com/nekop/yasnippet-java-mode">yasnippet-java-mode</a></p>
 </div>
 <div class="section" id="some-benefit">
-<h2><a class="toc-backref" href="#id3">Some Benefit</a></h2>
+<h2><a class="toc-backref" href="#id5">Some Benefit</a></h2>
 <ol class="arabic simple">
 <li>Almost everything for Eclipse, you could insert getter and setter, problem report, auto import, auto suggest, but everything is called by yourself. So you could focus on the structure and correct errors after you finish the design. Just check the mode’s function and their names tell itself.</li>
 <li>Better Keybind, because I am using evil mode in emacs, so that means I could use vi and emacs together to code with the help of Eclipse.</li>
 </ol>
 </div>
 <div class="section" id="some-tips-and-pitfall">
-<h2><a class="toc-backref" href="#id4">Some Tips and pitfall</a></h2>
+<h2><a class="toc-backref" href="#id6">Some Tips and pitfall</a></h2>
 <p>Don’t use eclimd, which is a eclipse server in Emacs. That would make your Emacs crash. Instead, using Eclimd in terminal, I tried that in Mac, everything is <span class="caps">OK</span>.</p>
 <p>You may need to set the varialble of eclim-executable variable in emacs to taget the eclim if you install Eclipse and Eclim in other place.</p>
 <p>Finally, install <a class="reference external" href="http://eclim.org">eclim</a></p>
