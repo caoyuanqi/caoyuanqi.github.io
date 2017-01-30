@@ -5,29 +5,36 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://caoyuanqi.github.io/</loc>
-<lastmod>2016-09-21T22:26:46-00:00</lastmod>
+<lastmod>2017-01-30T16:26:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://caoyuanqi.github.io/archives.html</loc>
-<lastmod>2016-09-21T22:26:46-00:00</lastmod>
+<lastmod>2017-01-30T16:26:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://caoyuanqi.github.io/tags.html</loc>
-<lastmod>2016-09-21T22:26:46-00:00</lastmod>
+<lastmod>2017-01-30T16:26:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://caoyuanqi.github.io/categories.html</loc>
-<lastmod>2016-09-21T22:26:46-00:00</lastmod>
+<lastmod>2017-01-30T16:26:15-00:00</lastmod>
 <changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://caoyuanqi.github.io/hhkb-one-year</loc>
+<lastmod>2017-01-01T00:00:00+11:00</lastmod>
+<changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
@@ -75,7 +82,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://caoyuanqi.github.io/author/yuanqi-cao.html</loc>
-<lastmod>2016-09-21T00:00:00+10:05</lastmod>
+<lastmod>2017-01-01T00:00:00+10:05</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
