@@ -74,13 +74,25 @@
 <div class="main">
   <div class="container">
     <div class="row article">
+      <div class="toc col m2 s12">
+        <div class="toc" id="">
 
-      <div class="article-content col m8 s12 offset-m2">
-        <div class="section" id="sessionattribte-is-not-designed-to-deal-with-session">
-<h2>SessionAttribte is not designed to deal with&nbsp;session</h2>
-<p>I found some articles online but some are so clear, I keep some note here to avoid misleading again. The design of session attibute is not to help client to store form base information rather than deal with session&nbsp;itself.</p>
-<p>Spring want to keep its technical independence. it introduced handlers to deal with the model objects. So it could use another technique rather than session or request model by injecting another handler, that is a good&nbsp;feature.</p>
-<p>However, it also introduced some wired way to synchronize the model data with backend real way of store data. It have to copy bewteen handler and real data. Just like below code from spring mvc, it introduced mvcContainer to synchronize&nbsp;data.</p>
+<ul class="simple">
+<li><a class="reference internal" href="#sessionattribte-is-not-designed-to-deal-with-session" id="id1">SessionAttribte is not designed to deal with session</a></li>
+<li><a class="reference internal" href="#session-attibute-is-designed-to-solve-the-problem-of-multiple-page-form-filling" id="id2">Session attibute is designed to solve the problem of multiple page form filling.</a></li>
+<li><a class="reference internal" href="#right-way-to-dealwith-session" id="id3">Right way to dealwith Session</a></li>
+</ul>
+</div>
+      </div>
+
+      <div class="article-content col m8 s12 ">
+        
+<p>This is a note to remind me the right way to understand the right way of using @sessionattribute.</p>
+<div class="section" id="sessionattribte-is-not-designed-to-deal-with-session">
+<h2><a class="toc-backref" href="#id1">SessionAttribte is not designed to deal with session</a></h2>
+<p>I found some articles online but some are so clear, I keep some note here to avoid misleading again. The design of session attibute is not to help client to store form base information rather than deal with session itself.</p>
+<p>Spring want to keep its technical independence. it introduced handlers to deal with the model objects. So it could use another technique rather than session or request model by injecting another handler, that is a good feature.</p>
+<p>However, it also introduced some wired way to synchronize the model data with backend real way of store data. It have to copy bewteen handler and real data. Just like below code from spring mvc, it introduced mvcContainer to synchronize data.</p>
 <div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">updateModel</span><span class="o">(</span><span class="n">NativeWebRequest</span> <span class="n">request</span><span class="o">,</span> <span class="n">ModelAndViewContainer</span> <span class="n">mavContainer</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
 
     <span class="k">if</span> <span class="o">(</span><span class="n">mavContainer</span><span class="o">.</span><span class="na">getSessionStatus</span><span class="o">().</span><span class="na">isComplete</span><span class="o">()){</span>
@@ -97,13 +109,13 @@
 </pre></div>
 </div>
 <div class="section" id="session-attibute-is-designed-to-solve-the-problem-of-multiple-page-form-filling">
-<h2>Session attibute is designed to solve the problem of multiple page form&nbsp;filling.</h2>
-<p>it is suggested to use session attribute to just handle form information, becasue it is clear to use this annotation in one controller but not so clear crossing the&nbsp;controller.</p>
-<p>There is a potential problem of using session attribute to deal with common session. If we inject the session in the controller use &#64;sessionattribute and &#64;httpsession at the sametime, values managed by both &#64;sessionattribute and &#64;httpsession the change will finnally be restored by spring mvc if we forget set the status&nbsp;complete.</p>
+<h2><a class="toc-backref" href="#id2">Session attibute is designed to solve the problem of multiple page form filling.</a></h2>
+<p>it is suggested to use session attribute to just handle form information, becasue it is clear to use this annotation in one controller but not so clear crossing the controller.</p>
+<p>There is a potential problem of using session attribute to deal with common session. If we inject the session in the controller use @sessionattribute and @httpsession at the sametime, values managed by both @sessionattribute and @httpsession the change will finnally be restored by spring mvc if we forget set the status complete.</p>
 </div>
 <div class="section" id="right-way-to-dealwith-session">
-<h2>Right way to dealwith&nbsp;Session</h2>
-<p>Inject HttpSession in parameter, and deal with that directly. Don&#8217;t use &#64;SessionAttribute to deal with common&nbsp;session.</p>
+<h2><a class="toc-backref" href="#id3">Right way to dealwith Session</a></h2>
+<p>Inject HttpSession in parameter, and deal with that directly. Don’t use @SessionAttribute to deal with common session.</p>
 </div>
 
 <section>
