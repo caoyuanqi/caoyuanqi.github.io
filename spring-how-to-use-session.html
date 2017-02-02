@@ -6,10 +6,10 @@
     <meta name="author" content="Yuanqi Cao" />
     <meta name="copyright" content="Yuanqi Cao" />
 
-    <meta name="description" content="Emacs is more good modern now
+    <meta name="description" content="to summary the session attribute:
 " />
-<meta name="keywords" content="Emacs Modern, Emacs, Emacs" />
-    <title>Emacs is more beautiful&nbsp;now  · Yuanqi Cao Blog
+<meta name="keywords" content="Spring, Programming, spring attribute session" />
+    <title>use of session attribute in&nbsp;Spring  · Yuanqi Cao Blog
 </title>
     <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="http://caoyuanqi.github.io/theme/css/solarizedlight.css" media="screen">
@@ -76,10 +76,35 @@
     <div class="row article">
 
       <div class="article-content col m8 s12 offset-m2">
-        <p>After years of development, Emacs and its users such as me are all satisified by the ugly Icon and old style outlook designs. After years of use, I always thinks some design of sublime is not essential. Vi users should think I just use terminal vi. However, no matter how we argue that Emacs&#8217;s friend and enermy is vi. People always think Emacs not friendly and not so cool like other editors, such as sublime, atom and even&nbsp;bracket.</p>
-<p>I even think emacs don&#8217;t need to be updated becaus every edition is similar. However, it seems that 25.1 version have change my idea that emacs will be more modern and more beautiful in next decade or next 40&nbsp;years.</p>
-<p>The Icon changed to a more beautiful design and the official site has changed as well. It will introduce people to discovery and try the Emacs through  <a class="reference external" href="http://http://emacsrocks.com">Emacs Rocks</a> and that is actually not the style of Emacs. I am getting used read some boring document. That feeling just like tha an old people finaly published an advertisement to say &#8216;Hey, I am so&nbsp;cool&#8217;.</p>
-<p>Emacs is so cool in version 25.1 in its 40 years old ceremony, I hope it will keep cool in next 40&nbsp;years.</p>
+        <div class="section" id="sessionattribte-is-not-designed-to-deal-with-session">
+<h2>SessionAttribte is not designed to deal with&nbsp;session</h2>
+<p>I found some articles online but some are so clear, I keep some note here to avoid misleading again. The design of session attibute is not to help client to store form base information rather than deal with session&nbsp;itself.</p>
+<p>Spring want to keep its technical independence. it introduced handlers to deal with the model objects. So it could use another technique rather than session or request model by injecting another handler, that is a good&nbsp;feature.</p>
+<p>However, it also introduced some wired way to synchronize the model data with backend real way of store data. It have to copy bewteen handler and real data. Just like below code from spring mvc, it introduced mvcContainer to synchronize&nbsp;data.</p>
+<div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">updateModel</span><span class="o">(</span><span class="n">NativeWebRequest</span> <span class="n">request</span><span class="o">,</span> <span class="n">ModelAndViewContainer</span> <span class="n">mavContainer</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+
+    <span class="k">if</span> <span class="o">(</span><span class="n">mavContainer</span><span class="o">.</span><span class="na">getSessionStatus</span><span class="o">().</span><span class="na">isComplete</span><span class="o">()){</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">sessionAttributesHandler</span><span class="o">.</span><span class="na">cleanupAttributes</span><span class="o">(</span><span class="n">request</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">else</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">sessionAttributesHandler</span><span class="o">.</span><span class="na">storeAttributes</span><span class="o">(</span><span class="n">request</span><span class="o">,</span> <span class="n">mavContainer</span><span class="o">.</span><span class="na">getModel</span><span class="o">());</span>
+    <span class="o">}</span>
+
+    <span class="k">if</span> <span class="o">(!</span><span class="n">mavContainer</span><span class="o">.</span><span class="na">isRequestHandled</span><span class="o">())</span> <span class="o">{</span>
+        <span class="n">updateBindingResult</span><span class="o">(</span><span class="n">request</span><span class="o">,</span> <span class="n">mavContainer</span><span class="o">.</span><span class="na">getModel</span><span class="o">());</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<div class="section" id="session-attibute-is-designed-to-solve-the-problem-of-multiple-page-form-filling">
+<h2>Session attibute is designed to solve the problem of multiple page form&nbsp;filling.</h2>
+<p>it is suggested to use session attribute to just handle form information, becasue it is clear to use this annotation in one controller but not so clear crossing the&nbsp;controller.</p>
+<p>There is a potential problem of using session attribute to deal with common session. If we inject the session in the controller use &#64;sessionattribute and &#64;httpsession at the sametime, values managed by both &#64;sessionattribute and &#64;httpsession the change will finnally be restored by spring mvc if we forget set the status&nbsp;complete.</p>
+</div>
+<div class="section" id="right-way-to-dealwith-session">
+<h2>Right way to dealwith&nbsp;Session</h2>
+<p>Inject HttpSession in parameter, and deal with that directly. Don&#8217;t use &#64;SessionAttribute to deal with common&nbsp;session.</p>
+</div>
 
 <section>
 <p id="comment-message">Leave me a message </p>
@@ -87,8 +112,8 @@
     <div class="accordion-group">
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-                    data-disqus-identifier="cao-emacs-more-modern"
-                href="http://caoyuanqi.github.io/emacs_beautiful#disqus_thread">
+                    data-disqus-identifier="cao-spring-attribute-session"
+                href="http://caoyuanqi.github.io/spring-how-to-use-session#disqus_thread">
                 Comments
             </a>
         </div>
@@ -98,8 +123,8 @@
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'caoyuanqigithubio';
-        var disqus_identifier = 'cao-emacs-more-modern';
-    var disqus_url = 'http://caoyuanqi.github.io/emacs_beautiful';
+        var disqus_identifier = 'cao-spring-attribute-session';
+    var disqus_url = 'http://caoyuanqi.github.io/spring-how-to-use-session';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -117,20 +142,20 @@
         <aside>
           <hr>
           <ul class="articles_timeline">
-                <li class="previous_article"><a href="emacs_java_environment" title="Previous: Emacs java&nbsp;development">Emacs java&nbsp;development</a></li>
-                <li class="next_article"><a href="spring-how-to-use-session" title="Next: use of session attribute in&nbsp;Spring">use of session attribute in&nbsp;Spring</a></li>
+                <li class="previous_article"><a href="emacs_beautiful" title="Previous: Emacs is more beautiful&nbsp;now">Emacs is more beautiful&nbsp;now</a></li>
+                <li class="next_article"><a href="hhkb-one-year" title="Next: Thanks to my friend - <span class="caps">HHKB</span>">Thanks to my friend - <span class="caps">HHKB</span></a></li>
           </ul>
         </aside>
       </div> <!-- article content -->
       <div class="more-info col m2 s12">
  
         <h4>Published</h4>
-        <time pubdate="pubdate" datetime="2016-09-21T00:00:00+10:00">Sep 21, 2016</time>
+        <time pubdate="pubdate" datetime="2016-10-09T00:00:00+11:00">Oct 9, 2016</time>
         <h4>Category</h4>
-        <a class="category-link" href="/categories.html#Emacs-ref">Emacs</a> 
+        <a class="category-link" href="/categories.html#Programming-ref">Programming</a> 
         <h4>Tags</h4>
         <ul class="list-of-tags tags-in-article"> 
-          <li><a href="/tags.html#Emacs-Modern-ref">Emacs Modern
+          <li><a href="/tags.html#Spring-ref">Spring
               <span>1</span>
 </a></li>
         </ul>
