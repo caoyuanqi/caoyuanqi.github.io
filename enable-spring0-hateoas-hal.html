@@ -6,10 +6,10 @@
     <meta name="author" content="Yuanqi Cao" />
     <meta name="copyright" content="Yuanqi Cao" />
 
-    <meta name="description" content="Emacs and java
+    <meta name="description" content="enable spring hal in hateoas
 " />
-<meta name="keywords" content="hhkb, hobby, emacs hhkb" />
-    <title>Thanks to my friend - <span class="caps">HHKB</span>  · Yuanqi Cao Blog
+<meta name="keywords" content="spring, spring-hateoas, Spring, " />
+    <title>Setting hal in spring&nbsp;hateoas  · Yuanqi Cao Blog
 </title>
     <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="http://caoyuanqi.github.io/theme/css/solarizedlight.css" media="screen">
@@ -76,17 +76,48 @@
     <div class="row article">
 
       <div class="article-content col m8 s12 offset-m2">
-        <p>Life is hard and coding is lonely. However, with your help I can not fell my fingers now. for one year memory with Happy hacking keyboard. Long live&nbsp;emacs.</p>
-<img alt="happy hacking keyboard" src="http://caoyuanqi.github.io/images/hhkb.jpg" style="width: 100%;" />
+        <h1><span class="caps">HAL</span> Setting in Spring&nbsp;hateoas</h1>
+<h2>If not setting spring hateoas&nbsp;hal</h2>
+<p>Spring Hateoas project is a amazing project to make hateoas project very easy. However, if we don&#8217;t tell spring hateoas which style we want to use. it would not provide consistent style. I found that in my recent project. It is a wired bug. Because I always expect <span class="caps">HAL</span> style when I code in React&nbsp;project.</p>
+<h2>How&nbsp;to</h2>
+<p>To tell spring hateoas your setting, we should add this&nbsp;annotation. </p>
+<div class="highlight"><pre><span></span>@EnableHypermediaSupport(type = EnableHypermediaSupport.HypermediaType.HAL)
+</pre></div>
 
+
+<p>Here is a more complete application&nbsp;setting.</p>
+<div class="highlight"><pre><span></span><span class="n">package</span> <span class="n">au</span><span class="o">.</span><span class="n">com</span><span class="o">.</span><span class="n">othera</span><span class="o">.</span><span class="n">accountservice</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">org.springframework.boot.SpringApplication</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.boot.autoconfigure.SpringBootApplication</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.cloud.client.discovery.EnableDiscoveryClient</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.cloud.netflix.feign.EnableFeignClients</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.hateoas.config.EnableHypermediaSupport</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.scheduling.annotation.EnableAsync</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">org.springframework.scheduling.annotation.EnableScheduling</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">springfox.documentation.swagger2.annotations.EnableSwagger2</span><span class="p">;</span>
+
+<span class="nd">@SpringBootApplication</span>
+<span class="nd">@EnableDiscoveryClient</span>
+<span class="nd">@EnableFeignClients</span>
+<span class="nd">@EnableSwagger2</span>
+<span class="nd">@EnableAsync</span>
+<span class="nd">@EnableScheduling</span>
+<span class="nd">@EnableHypermediaSupport</span><span class="p">(</span><span class="nb">type</span> <span class="o">=</span> <span class="n">EnableHypermediaSupport</span><span class="o">.</span><span class="n">HypermediaType</span><span class="o">.</span><span class="n">HAL</span><span class="p">)</span>
+<span class="n">public</span> <span class="k">class</span> <span class="nc">xxx</span> <span class="p">{</span>
+    <span class="n">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">SpringApplication</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">AccountServiceApplication</span><span class="o">.</span><span class="n">class</span><span class="p">,</span> <span class="n">args</span><span class="p">);</span>
+    <span class="p">}</span> 
+<span class="p">}</span>
+</pre></div>
 <section>
 <p id="comment-message">Leave me a message </p>
 <div class="accordion" id="accordion2">
     <div class="accordion-group">
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-                    data-disqus-identifier="cao-hhkb"
-                href="http://caoyuanqi.github.io/hhkb-one-year#disqus_thread">
+                href="http://caoyuanqi.github.io/enable-spring0-hateoas-hal#disqus_thread">
                 Comments
             </a>
         </div>
@@ -96,8 +127,8 @@
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'caoyuanqigithubio';
-        var disqus_identifier = 'cao-hhkb';
-    var disqus_url = 'http://caoyuanqi.github.io/hhkb-one-year';
+        var disqus_identifier = 'http://caoyuanqi.github.io/enable-spring0-hateoas-hal';
+    var disqus_url = 'http://caoyuanqi.github.io/enable-spring0-hateoas-hal';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -115,20 +146,22 @@
         <aside>
           <hr>
           <ul class="articles_timeline">
-                <li class="previous_article"><a href="spring-how-to-use-session" title="Previous: use of session attribute in&nbsp;Spring">use of session attribute in&nbsp;Spring</a></li>
-                <li class="next_article"><a href="enable-spring0-hateoas-hal" title="Next: Setting hal in spring&nbsp;hateoas">Setting hal in spring&nbsp;hateoas</a></li>
+                <li class="previous_article"><a href="hhkb-one-year" title="Previous: Thanks to my friend - <span class="caps">HHKB</span>">Thanks to my friend - <span class="caps">HHKB</span></a></li>
           </ul>
         </aside>
       </div> <!-- article content -->
       <div class="more-info col m2 s12">
  
         <h4>Published</h4>
-        <time pubdate="pubdate" datetime="2017-01-01T00:00:00+11:00">Jan 1, 2017</time>
+        <time pubdate="pubdate" datetime="2017-10-31T00:00:00+11:00">Oct 31, 2017</time>
         <h4>Category</h4>
-        <a class="category-link" href="/categories.html#hobby-ref">hobby</a> 
+        <a class="category-link" href="/categories.html#Spring-ref">Spring</a> 
         <h4>Tags</h4>
         <ul class="list-of-tags tags-in-article"> 
-          <li><a href="/tags.html#hhkb-ref">hhkb
+          <li><a href="/tags.html#spring-ref">spring
+              <span>2</span>
+</a></li>
+          <li><a href="/tags.html#spring-hateoas-ref">spring-hateoas
               <span>1</span>
 </a></li>
         </ul>
